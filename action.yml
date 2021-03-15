@@ -1,0 +1,11 @@
+name: Python testing
+runs-on: ubuntu-latest
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+steps:
+- uses: actions/checkout@master
+- name: Default argument
+  uses: minakoari/actions-test@master
+  with:
+    args: pytest --help
