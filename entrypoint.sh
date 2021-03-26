@@ -39,12 +39,10 @@ fi
 
 case $TYPE in
     pytest)
-        echo sh -c pytest $EXTRA
-        sh -c "pytest $EXTRA"
+        sh -c "if [ -f requirements.txt ]; then pip install -r requirements.txt; fi && pytest $EXTRA"
     ;;
     
     maven)
-        echo sh -c mvn test $EXTRA -q
         sh -c "mvn test $EXTRA -q"
     ;;
     
