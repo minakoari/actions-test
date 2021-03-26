@@ -31,11 +31,11 @@ set -e
 #     esac
 # done
 
-if [ -z "$INPUT_TEST_TYPE" ]
-then
-    usage
-    exit 1
-fi
+# if [ -z $INPUT_TEST_TYPE ]
+# then
+#     usage
+#     exit 1
+# fi
 
 case $INPUT_TEST_TYPE in
     pytest)

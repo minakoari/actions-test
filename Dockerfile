@@ -8,7 +8,7 @@ RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install pytest
 
 # Java/Maven support
-# RUN apt-get update && apt-get install -y openjdk-11-jdk maven
+RUN apt-get update && apt-get install -y openjdk-11-jdk maven
 
 RUN apt-get update && apt-get install -y stress-ng
 

@@ -1,10 +1,11 @@
-# Simple Action for Python testing
+# Simple Action for testing
 
 ### Usage
 
 ```yml
-- name: Simple Action for Python testing
-  uses: minakoari/actions-test@master
+- name: Execute tests
+  uses: minakoari/actions-test@main
   with:
-    args: pip3 install -r requirements.txt && pytest
+    test_type: [pytest, maven]
+    extra_arguments: [optional]
 ```
