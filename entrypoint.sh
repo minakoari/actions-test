@@ -31,22 +31,19 @@ set -e
 #     esac
 # done
 
-TYPE = $INPUT_TEST_TYPE
-EXTRA = $INPUT_EXTRA_ARGUMENTS
-
-if [ -z "$TYPE" ]
+if [ -z "$INPUT_TEST_TYPE" ]
 then
     usage
     exit 1
 fi
 
-case $TYPE in
+case $INPUT_TEST_TYPE in
     pytest)
-        sh -c "if [ -f requirements.txt ]; then pip install -r requirements.txt; fi && pytest $EXTRA"
+        sh -c "if [ -f requirements.txt ]; then pip install -r requirements.txt; fi && pytest $INPUT_EXTRA_ARGUMENTS"
     ;;
     
     maven)
-        sh -c "mvn test $EXTRA -q"
+        sh -c "mvn test $INPUT_EXTRA_ARGUMENTS -q"
     ;;
     
     *)
