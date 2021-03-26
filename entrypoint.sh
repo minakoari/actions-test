@@ -34,7 +34,7 @@ done
 if [ -z "$TYPE" ]
 then
     usage
-    exit
+    exit 1
 fi
 
 case $TYPE in
