@@ -40,12 +40,12 @@ fi
 case $TYPE in
     pytest)
         echo sh -c pytest $EXTRA
-        sh -c pytest $EXTRA
+        sh -c "pytest $EXTRA"
     ;;
     
     maven)
         echo sh -c mvn test $EXTRA -q
-        sh -c mvn test $EXTRA -q
+        sh -c "mvn test $EXTRA -q"
     ;;
     
     *)
